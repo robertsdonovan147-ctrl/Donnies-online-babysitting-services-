@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donnie's Babysitting Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e9eef7;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .header {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .section {
+      margin-bottom: 18px;
+      line-height: 1.5rem;
+      font-size: 1rem;
+      color: #333;
+      text-align: center;
+    }
+
+    .contact-box {
+      margin-top: 25px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #f7f7f7;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .btn {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: #4a6cff;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav" style="width:100%; max-width:420px; background:#4a6cff; padding:14px; border-radius:14px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.15); color:white; display:flex; justify-content:space-between; align-items:center; font-weight:bold; font-size:1.05rem;">
+  <a href="#about" style="color:white; text-decoration:none; display:flex; align-items:center; gap:6px;">
+    <span>📄</span> About
+  </a>
+  <a href="sms:7209679865" style="color:white; text-decoration:none; display:flex; align-items:center; gap:6px;">
+    <span>💬</span> Text
+  </a>
+  <a href="#reviews" style="color:white; text-decoration:none; display:flex; align-items:center; gap:6px;">
+    <span>⭐</span> Reviews
+  </a>
+  <a href="https://wa.me/17209679865" style="color:white; text-decoration:none; font-size:1.3rem; display:flex; align-items:center;">
+    🟢
+  </a>
+</div>
+
+<div class="card">
+
+    <div style="text-align:center; margin-bottom:15px;">
+  <img src="attachment:620fef70-9dc2-49a5-a8f8-a15309fdcbdc" alt="Donovan Photo" style="width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+</div>
+
+<div class="header">
+      Donnie's Babysitting Services<br>
+      <span style="font-size:0.9rem; font-weight:normal;">Serving Aurora up to Arvada, Colorado</span>
+    </div>
+
+    <div class="section">
+      Hello families, my name is Donovan Roberts, but you can call me Donnie. I provide dependable and caring babysitting services for families across Aurora and up to Arvada.
+      <br><br>
+      I bring **16 years of childcare experience** and **1 year of restaurant kitchen experience**, which helps me keep things clean, safe, and organized.
+      <br><br>
+      My starting rate is **$15.50/hr**. Your support helps me pay for my CNA college books and training as I work toward my certification.
+      <br><br>
+      I look forward to hearing from potential customers and supporting your family.
+      <br><br>
+      If your children have allergies, medications, or special instructions, please text or email me before booking.
+    </div>
+
+    <div class="contact-box">
+      <strong>Contact Me</strong><br><br>
+
+      <a class="btn" href="tel:7209679865">Call Me</a>
+      <a class="btn" href="sms:7209679865">Text Me (SMS)</a>
+      <a class="btn" href="https://wa.me/17209679865">WhatsApp Message</a>
+      <a class="btn" href="mailto:robertsdonovan147@gmail.com">Email Me</a>
+
+    </div>
+
+  <div id="reviews" style="margin-top:25px; text-align:center;">
+    <h2 style="font-size:1.2rem; margin-bottom:10px;">Leave a Review</h2>
+
+    <textarea id="reviewText" placeholder="Write your review here..." style="width:100%; max-width:420px; height:90px; padding:10px; border-radius:10px; border:1px solid #ccc; resize:none;"></textarea>
+
+    <div id="starContainer" style="margin:15px 0; font-size:1.8rem; cursor:pointer;">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+
+    <button onclick="submitReview()" style="padding:12px 20px; border:none; border-radius:10px; background:#4a6cff; color:white; font-weight:bold; width:100%; max-width:420px; box-shadow:0 3px 10px rgba(0,0,0,0.12);">Submit Review</button>
+
+    <h3 id="averageRating" style="margin-top:25px; font-size:1.1rem; font-weight:bold;">Average Rating: 0 / 5 ⭐</h3>
+    <h3 style="margin-top:10px;">Past Reviews</h3>
+    <div id="reviewList" style="max-height:200px; overflow-y:auto; padding:10px; border:1px solid #ddd; border-radius:10px; background:#fafafa;"></div>
+  </div>
+
+</div>
+
+<script>
+  let selectedStars = 0;
+  let totalStars = 0;
+  let totalReviews = 0;
+
+  document.querySelectorAll('.star').forEach(star => {
+    star.style.transition = 'transform 0.2s ease';
+    star.addEventListener('click', () => {
+      selectedStars = parseInt(star.getAttribute('data-value'));
+      star.style.transform = 'scale(1.3)';
+      setTimeout(() => { star.style.transform = 'scale(1)'; }, 150);
+      updateStars();
+    });
+  });
+
+  function updateStars() {
+    document.querySelectorAll('.star').forEach(star => {
+      let value = parseInt(star.getAttribute('data-value'));
+      star.style.color = value <= selectedStars ? 'red' : '#aaa';
+    });
+  }
+
+  function submitReview() {
+    let text = document.getElementById('reviewText').value;
+    if (!text.trim()) return;
+
+    let reviewList = document.getElementById('reviewList');
+    let item = document.createElement('div');
+    item.style.padding = '10px';
+    item.style.marginBottom = '10px';
+    item.style.background = 'white';
+    item.style.borderRadius = '8px';
+    item.style.boxShadow = '0 2px 6px rgba(0,0,0,0.1)';
+    item.style.display = 'flex';
+    item.style.gap = '10px';
+
+    let avatar = document.createElement('div');
+    avatar.style.width = '40px';
+    avatar.style.height = '40px';
+    avatar.style.borderRadius = '50%';
+    avatar.style.background = '#ccc';
+    avatar.style.display = 'flex';
+    avatar.style.justifyContent = 'center';
+    avatar.style.alignItems = 'center';
+    avatar.style.fontWeight = 'bold';
+    avatar.style.fontSize = '1rem';
+    avatar.innerText = text.trim()[0].toUpperCase();
+
+    let content = document.createElement('div');
+    content.innerHTML = `<div style='color:red; font-size:1.2rem;'>${'★'.repeat(selectedStars)}${'☆'.repeat(5-selectedStars)}</div><p style='font-size:0.9rem;'>${text}</p>`;
+
+    item.appendChild(avatar);
+    item.appendChild(content);
+
+    reviewList.prepend(item);
+
+    totalStars += selectedStars;
+    totalReviews++;
+    updateAverage();
+
+    document.getElementById('reviewText').value = '';
+    selectedStars = 0;
+    updateStars();
+  }
+
+  function updateAverage() {
+    let avg = (totalStars / totalReviews).toFixed(1);
+    document.getElementById('averageRating').innerHTML = `Average Rating: ${avg} / 5 ⭐`;
+  }
+</script>
+
+</body>
+</html>
+
+
